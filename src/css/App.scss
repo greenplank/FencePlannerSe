@@ -1,0 +1,60 @@
+@import "Components/MainSection";
+
+
+.slick-next:before,
+.slick-prev:before {
+  color: black;
+  z-index: 999999;
+}
+
+.img-cont-text:hover .checker {
+  background-color: green !important;
+}
+
+.main-view {
+  height: 100vh;
+  width: 100%;
+}
+
+.tab-container {
+  height: 100vh;
+  // overflow-y: scroll;
+  // overflowhidden;
+}
+
+.pannel-container {
+  height: 80vh;
+  width: 100%;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  overflow-x: hidden;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.pannel-container::-webkit-scrollbar {
+  display: none;
+}
+
+#scroll-bar-none::-webkit-scrollbar {
+  display: none;
+}
+@media only screen and (max-width: 682px) {
+  .main-view {
+    height: 50vh;
+    width: 100%;
+  }
+
+  .tab-container {
+    height: 50vh;
+  }
+
+  .pannel-container {
+    height: 40vh;
+  }
+}
+
+.MuiTab-textColorPrimary.Mui-selected{
+  color: green !important;
+}

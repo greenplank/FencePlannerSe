@@ -1,0 +1,344 @@
+.wrapper {
+  height: 100vh;
+  min-height: 100%;
+  width: 100%;
+  min-width: 100%;
+  overflow-x: hidden;
+}
+.left-side {
+  height: 87vh;
+}
+.right-side .tabs {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.main-navbar .navbar-nav .nav-item .nav-link {
+  font-weight: 600 !important;
+}
+
+
+/* Main Tabs Start */
+.tabs {
+  position: relative;
+  clear: both;
+  margin: 0;
+  top: -22px;
+}
+.tab {
+  float: left;
+}
+.tab label {
+  background: #eee;
+  padding: 0px 22px;
+  font-size: small;
+  margin: 0 5px;
+  margin-left: -1px;
+  position: relative;
+  left: 1px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.tab label:hover {
+  background: white;
+  transition: all 0.3s;
+}
+.tab [type="radio"] {
+  display: none;
+}
+.content {
+  position: absolute;
+  left: 0;
+  background: white;
+  display: none;
+  width: 100%;
+  padding: 10px 0px;
+}
+.tab [type="radio"]:checked ~ label {
+  background: white;
+  z-index: 2;
+}
+.tab [type="radio"]:checked ~ label ~ .content {
+  z-index: 1;
+  display: flex;
+}
+/* Main Tabs End */
+
+/* Inner Tabs Start */
+.inner-tabs .texture-inner-tabs {
+  position: relative;
+  clear: both;
+  width: 100%;
+  left: 0;
+  height: auto;
+}
+.inner-tab {
+  float: left;
+}
+.inner-tab label {
+  padding: 5px 28px;
+  margin: 0px 5px;
+  border: 2px solid black;
+  position: relative;
+  background-color: white;
+  transition: all 0.3s;
+}
+.inner-tab label:hover {
+  background: green;
+  transition: all 0.3s;
+  color: white;
+}
+.inner-tab input [type="radio"] {
+  display: none;
+}
+.inner-content {
+  top: 40px;
+  position: absolute;
+  padding: 5px;
+  display: none !important;
+}
+.inner-content .inner-tab-data {
+  padding: 0px 5px !important;
+}
+.inner-content .inner-tab-data:nth-of-type(1) p {
+  background: gray;
+  color: white;
+}
+.inner-content .inner-tab-data:nth-of-type(2) p {
+  background: lightgray;
+}
+.inner-content .inner-tab-data:nth-of-type(3) p {
+  background: black;
+  color: white;
+}
+.inner-tab [type="radio"]:checked ~ label {
+  color: white;
+  background: green;
+}
+.inner-tab [type="radio"]:checked ~ label ~ .inner-content {
+  left: 0;
+  display: flex !important;
+}
+/* Inner Tabs End */
+
+/* Inner Tabs Texture Start */
+.texture-inner-tabs {
+  margin: 10px 20px;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+}
+.texture-inner-tabs .inner-tab label {
+  font-size: 10px;
+  margin: 2.5px 10px;
+  border: 1px solid black;
+  padding: 5px 18px;
+  top: 20px;
+}
+.texture-inner-tabs .inner-tab .inner-content {
+  top: 110px;
+  margin: 0px 40px !important;
+}
+/* Inner Tabs Texture End */
+
+/* Inner Tabs Calcluation Start */
+.calac-inner-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0px 20px;
+}
+.calac-inner-tabs
+  .calac-inner-tab
+  [type="radio"]
+  ~ label
+  ~ .inner-content
+  input {
+  border: 1px solid black;
+  outline: none;
+  padding: 0 5px;
+}
+.calac-inner-tab [type="radio"] ~ label {
+  padding: 10px 10px;
+  margin: 5px 10px;
+}
+.calac-inner-tab [type="radio"] ~ label img {
+  width: 40px;
+}
+.calac-inner-tab [type="radio"]:checked ~ label {
+  color: white;
+  /* background-color: green; */
+}
+
+.calac-inner-tab [type="radio"]:checked ~ label ~ .inner-content {
+  display: block !important;
+  position: absolute;
+  top: 150px;
+  width: 100%;
+  left: 0;
+  padding: 0px 10px;
+}
+/* Inner Tabs Calcluation End */
+
+/* Gallery Filter Start */
+
+.Portfolio {
+  position: relative;
+  margin: 5px;
+  float: left;
+  width: 120px;
+  height: 130px;
+  transition-duration: 0.4s;
+  border-radius: 5px;
+  animation: winanim 0.5s;
+}
+
+.Portfolio:hover .price {
+  opacity: 1;
+  transition: all 0.5s;
+}
+.price {
+  position: absolute;
+  height: 74%;
+  border-radius: 5px;
+  width: 100%;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  top: 0;
+  transition: all 0.5s;
+  opacity: 0;
+}
+.price_p {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+.Portfolio img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.desc {
+  padding: 5px;
+  font-size: 10px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+ul.nav {
+  padding: 20px 10px;
+  width: 100%;
+  margin-top: -30px;
+  display: flex;
+  justify-content: center;
+}
+
+.nav li a {
+  margin: 5px;
+  padding: 0px 15px;
+  font-size: small;
+  color: black;
+  background: white;
+  border-radius: 0 !important;
+  border: 1px solid black;
+  transition-duration: 0.4s;
+}
+.nav a:hover {
+  background: green;
+  color: white;
+}
+.nav .active {
+  background-color: green !important;
+  color: #fff;
+}
+
+@keyframes winanim {
+  0% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.owl-carousel:hover .owl-buttons {
+  display: block;
+}
+.owl-item:first-of-type {
+  margin-left: 0;
+}
+
+.owl-item {
+  text-align: center;
+}
+
+.owl-theme .owl-controls .owl-buttons div {
+  //   font-size: 40px;
+  margin: 0;
+  //   padding: 0 60px;
+  position: absolute;
+  top: 0;
+}
+.owl-theme .owl-controls .owl-buttons .owl-prev {
+  left: -8px;
+  background-color: inherit;
+  padding: 3px;
+  top: 175px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.owl-theme .owl-controls .owl-buttons .owl-next {
+  right: -3px;
+  background-color: inherit;
+  padding: 3px;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 175px;
+}
+.owl-theme .owl-controls .owl-page span {
+  display: none !important;
+}
+/* Gallery Filter End */
+
+/* Calcluation Tab Start */
+.calac-input:focus {
+  border: 1px solid green !important;
+}
+.calac-input:focus ~ label {
+  color: green !important;
+}
+.calac-input + label {
+  user-select: none;
+  cursor: text;
+  height: max-content;
+  position: absolute;
+  font-size: small;
+  background-color: #ffffff;
+  left: 13%;
+  top: -9px;
+}
+
+/* Calcluation Tab End */
+
+/* Responsive */
+
+@media only screen and (max-width: 576px) {
+  .left-side {
+    height: auto !important;
+  }
+  .right-side .tabs {
+    height: 300px !important;
+    top: 0;
+  }
+  .tab label {
+    padding: 0px 22px;
+    /* font-size: 10px; */
+  }
+  .Portfolio {
+    width: 110px;
+  }
+}
